@@ -1,0 +1,539 @@
+
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SC State Fair Concessions Home</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="includes/css/ui.all.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="includes/css/ui.all-admin.css" />
+    <script type="text/javascript">
+        $(window).resize(function() {});
+
+        $(document).ready(function() {
+            $('#tabs').tabs({
+                fx: {
+                    height: 'toggle'
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="includes/css/dailyreportstyle.css" />
+</head>
+
+<body>
+    <div id="header_main">
+    </div>
+    <!---------------------- Start Main Wrapper ---------------------->
+    <div id="wrapper_main" class="s12 m6">
+        <!---------------------- Insert Main Nav ---------------------->
+        <!---------------------- Start Content Wrapper ---------------------->
+        <div id="wrapper_content" class="s12 m6">
+            <!---------------------- Header ---------------------->
+            <div id="page-header"><span class="title">Concessions Home</span><span class="desc">Welcome to the Concessions Website</span></div>
+            <!---------------------- Start Left Nav ---------------------->
+            <!---------------------- End Left Nav ---------------------->
+            <div ng-app="dailyReport" class="w3-container w3-row-padding w3-black s12" id="page-content">
+                <div id="report_container">
+                    <div id="report">
+                    </div>
+                </div>
+                <form>
+                    <div id="location-container" class="w3-container w3-col s12 w3-black">
+
+                        <div class="locationRegisters w3-container w3-black w3-center">
+                            <button class="w3-bar-item w3-button w3-mobile drop" id="68">Location 68  <span class="locationtotal-68">&#8910;</span> </button>
+                            <div class="w3-container w3-black dropdown" style="display: none">
+                                <button class="w3-bar-item w3-button w3-mobile drop registerbtndrop" id="12">Register 1  <span>&#8910;</span></button>
+                                <div class="dropdown" style="display:none">
+
+                                    <fieldset>
+                                        <legend>Register 1</legend>
+
+                                        <div ng-controller="registerController" class="w3-container small">
+
+                                            <p class="disclaimer">*All editable fields below currently hold placeholders for example only.</p>
+                                            <div class="w3-row-padding w3-center">
+                                                <div class="w3-col s10 w3-right">
+                                                    <label>Z-Number</label>
+                                                    <input class="w3-input" type="number" name="Z number" value="3454356">
+                                                </div>
+                                            </div>
+
+                                            <div class="w3-row-padding s12 w3-center">
+                                                <div class="w3-col s10 w3-right">
+                                                    <label class="w3-center">Ending Grand Total</label>
+                                                    <input class="w3-input" type="number" name="Ending Grand Total" ng-change="calculate()" ng-model="end_grandTotal" value="{{ end_grandTotal() | currency }}" />
+
+                                                </div>
+                                            </div>
+
+                                            <div class=" w3-row-padding s12 w3-center">
+                                                <div class="w3-col w3-center s2">
+                                                    <p class="minus"><strong>&minus;</strong></p>
+                                                </div>
+                                                <div class=" w3-col s10">
+                                                    <label>Beginning Grand Total</label>
+                                                    <input class="w3-input" type="text" name="Beginning Grand Total" ng-change="calculate()" ng-model="beg_grandTotal" value="{{ beg_grandTotal() | currency }}" readonly="readonly" />
+
+                                                </div>
+                                            </div>
+
+                                            <div class=" w3-row-padding s12 w3-center">
+                                                <div class="w3-col s2">
+                                                    <p class="equals"><strong>&#61;</strong></p>
+                                                </div>
+                                                <div class="w3-col s10">
+                                                    <label>Daily Registered Sales</label>
+                                                    <input class="w3-input" type="text" ng-change="calculate()" ng-model="daily_regSales" value="{{ daily_regSales() | currency }}" readonly="readonly" />
+
+                                                </div>
+                                            </div>
+
+                                            <div class=" w3-row-padding s12 w3-center">
+                                                <div class="w3-col s2">
+                                                    <p class="minus"><strong>&minus;</strong></p>
+                                                </div>
+                                                <div class="w3-col s10">
+                                                    <label>Overrings</label>
+                                                    <input class="w3-input" type="number" name="Overrings" ng-change="calculate()" ng-model="overrings" value="{{ overrings() | currency }}" />
+
+                                                </div>
+                                            </div>
+
+                                            <div class=" w3-row-padding w3-center">
+                                                <div class="w3-col s10 w3-right">
+                                                    <label class="w3-center">Comments</label>
+                                                    <textarea class="w3-input s10" id="ringComment" type="text" rows="1"></textarea>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="  w3-row-padding w3-center">
+                                                <div class="w3-col s2">
+                                                    <p class="equals"><strong>&#61;</strong></p>
+                                                </div>
+                                                <div class="w3-col s10">
+                                                    <label>Daily Gross Sales</label>
+                                                    <input class="w3-input location-68" type="text" name="Daily Gross Sales" ng-model="daily_GrossSales" value="{{ daily_GrossSales() | currency }}" readonly="readonly" />
+                                                </div>
+                                                <br />
+                                            </div>
+
+
+                                        </div>
+                                    </fieldset>
+
+                                </div>
+                                <button class="w3-bar-item w3-button w3-mobile drop registerbtndrop" id="24">Register 2  <span>&#8910;</span></button>
+                                <div class="dropdown" id="" style="display:none">
+
+                                    <fieldset>
+                                        <legend>Register 2</legend>
+
+                                        <div ng-controller="registerController" class="w3-container small">
+
+                                            <p class="disclaimer">*All editable fields below currently hold placeholders for example only.</p>
+                                            <div class=" w3-row-padding w3-center">
+                                                <div class="w3-col s10 w3-right">
+                                                    <label>Z-Number</label>
+                                                    <input class="w3-input" type="number" name="Z number" value="3454356">
+
+                                                </div>
+                                            </div>
+
+                                            <div class=" w3-row-padding s12 w3-center">
+                                                <div class="w3-col s10 w3-right">
+                                                    <label class="w3-center">Ending Grand Total</label>
+                                                    <input class="w3-input" type="number" name="Ending Grand Total" ng-change="calculate()" ng-model="end_grandTotal" value="{{ end_grandTotal() | currency }}" />
+
+                                                </div>
+                                            </div>
+
+                                            <div class=" w3-row-padding s12 w3-center">
+                                                <div class="w3-col w3-center s2">
+                                                    <p class="minus"><strong>&minus;</strong></p>
+                                                </div>
+                                                <div class=" w3-col s10">
+                                                    <label>Beginning Grand Total</label>
+                                                    <input class="w3-input" type="text" name="Beginning Grand Total" ng-change="calculate()" ng-model="beg_grandTotal" value="{{ beg_grandTotal() | currency }}" readonly="readonly" />
+
+                                                </div>
+                                            </div>
+
+                                            <div class=" w3-row-padding s12 w3-center">
+                                                <div class="w3-col s2">
+                                                    <p class="equals"><strong>&#61;</strong></p>
+                                                </div>
+                                                <div class="w3-col s10">
+                                                    <label>Daily Registered Sales</label>
+                                                    <input class="w3-input" type="text" ng-change="calculate()" ng-model="daily_regSales" value="{{ daily_regSales() | currency }}" readonly="readonly" />
+
+                                                </div>
+                                            </div>
+
+                                            <div class=" w3-row-padding s12 w3-center">
+                                                <div class="w3-col s2">
+                                                    <p class="minus"><strong>&minus;</strong></p>
+                                                </div>
+                                                <div class="w3-col s10">
+                                                    <label>Overrings</label>
+                                                    <input class="w3-input" type="number" name="Overrings" ng-change="calculate()" ng-model="overrings" value="{{ overrings() | currency }}" />
+
+                                                </div>
+                                            </div>
+
+                                            <div class=" w3-row-padding w3-center">
+                                                <div class="w3-col s10 w3-right">
+                                                    <label class="w3-center">Comments</label>
+                                                    <textarea class="w3-input s10" id="ringComment" type="text" rows="1"></textarea>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="over w3-row-padding w3-center">
+                                                <div class="w3-col s2">
+                                                    <p class="equals"><strong>&#61;</strong></p>
+                                                </div>
+                                                <div class="w3-col s10">
+                                                    <label>Daily Gross Sales</label>
+                                                    <input class="w3-input location-68" type="text" name="Daily Gross Sales" ng-model="daily_GrossSales" value="{{ daily_GrossSales() | currency }}" readonly="readonly" />
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="w3-container w3-black w3-center">
+                            <button class="w3-bar-item w3-button w3-mobile drop" id="74">Location 74  <span class="locationtotal-74">&#8910;</span></button>
+                            <div class="w3-container w3-black dropdown" style="display: none">
+                                <button class="w3-bar-item w3-button w3-mobile drop registerbtndrop" id="13">Register 1  <span>&#8910;</span></button>
+                                <div class="dropdown" style="display:none">
+
+                                    <fieldset>
+                                        <legend>Register 1</legend>
+
+                                        <div ng-controller="registerController" class="w3-container small">
+
+                                            <p class="disclaimer">*All editable fields below currently hold placeholders for example only.</p>
+                                            <div class=" w3-row-padding w3-center">
+                                                <div class="w3-col s10 w3-right">
+                                                    <label>Z-Number</label>
+                                                    <input class="w3-input" type="number" name="Z number" value="3454356">
+
+                                                </div>
+                                            </div>
+
+                                            <div class=" w3-row-padding s12 w3-center">
+                                                <div class="w3-col s10 w3-right">
+                                                    <label class="w3-center">Ending Grand Total</label>
+                                                    <input class="w3-input" type="number" name="Ending Grand Total" ng-change="calculate()" ng-model="end_grandTotal" value="{{ end_grandTotal() | currency }}" />
+
+                                                </div>
+                                            </div>
+
+                                            <div class=" w3-row-padding s12 w3-center">
+                                                <div class="w3-col w3-center s2">
+                                                    <p class="minus"><strong>&minus;</strong></p>
+                                                </div>
+                                                <div class=" w3-col s10">
+                                                    <label>Beginning Grand Total</label>
+                                                    <input class="w3-input" type="text" name="Beginning Grand Total" ng-change="calculate()" ng-model="beg_grandTotal" value="{{ beg_grandTotal() | currency }}" readonly="readonly" />
+
+                                                </div>
+                                            </div>
+
+                                            <div class=" w3-row-padding s12 w3-center">
+                                                <div class="w3-col s2">
+                                                    <p class="equals"><strong>&#61;</strong></p>
+                                                </div>
+                                                <div class="w3-col s10">
+                                                    <label>Daily Registered Sales</label>
+                                                    <input class="w3-input" type="text" ng-change="calculate()" ng-model="daily_regSales" value="{{ daily_regSales() | currency }}" readonly="readonly" />
+
+                                                </div>
+                                            </div>
+
+                                            <div class=" w3-row-padding s12 w3-center">
+                                                <div class="w3-col s2">
+                                                    <p class="minus"><strong>&minus;</strong></p>
+                                                </div>
+                                                <div class="w3-col s10">
+                                                    <label>Overrings</label>
+                                                    <input class="w3-input" type="number" name="Overrings" ng-change="calculate()" ng-model="overrings" value="{{ overrings() | currency }}" />
+
+                                                </div>
+                                            </div>
+
+                                            <div class=" w3-row-padding w3-center s12 ">
+                                                <div class="w3-col w3-right s10">
+                                                    <label class="w3-center">Comments</label>
+                                                    <textarea class="w3-input" id="ringComment" value="" rows="1"></textarea>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="over w3-row-padding w3-center">
+                                                <div class="w3-col s2">
+                                                    <p class="equals"><strong>&#61;</strong></p>
+                                                </div>
+                                                <div class="w3-col s10">
+                                                    <label>Daily Gross Sales</label>
+                                                    <input class="w3-input location-74" type="text" name="Daily Gross Sales" ng-model="daily_GrossSales" value="{{ daily_GrossSales() | currency }}" readonly="readonly" />
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </fieldset>
+
+                                </div>
+                                <button class="w3-bar-item w3-button w3-mobile drop registerbtndrop" id="26">Register 2  <span>&#8910;</span></button>
+                                <div class="dropdown" style="display:none">
+
+                                    <fieldset>
+                                        <legend>Register 2</legend>
+
+                                        <div ng-controller="registerController" class="w3-container small">
+
+                                            <p class="disclaimer">*All editable fields below currently hold placeholders for example only.</p>
+                                            <div class=" w3-row-padding w3-center">
+                                                <div class="w3-col s10 w3-right">
+                                                    <label>Z-Number</label>
+                                                    <input class="w3-input" type="number" name="Z number" value="3454356">
+
+                                                </div>
+                                            </div>
+
+                                            <div class=" w3-row-padding s12 w3-center">
+                                                <div class="w3-col s10 w3-right">
+                                                    <label class="w3-center">Ending Grand Total</label>
+                                                    <input class="w3-input" type="number" name="Ending Grand Total" ng-change="calculate()" ng-model="end_grandTotal" value="{{ end_grandTotal() | currency }}" />
+
+                                                </div>
+                                            </div>
+
+                                            <div class=" w3-row-padding s12 w3-center">
+                                                <div class="w3-col w3-center s2">
+                                                    <p class="minus"><strong>&minus;</strong></p>
+                                                </div>
+                                                <div class=" w3-col s10">
+                                                    <label>Beginning Grand Total</label>
+                                                    <input class="w3-input" type="text" name="Beginning Grand Total" ng-change="calculate()" ng-model="beg_grandTotal" value="{{ beg_grandTotal() | currency }}" readonly="readonly" />
+
+                                                </div>
+                                            </div>
+
+                                            <div class=" w3-row-padding s12 w3-center">
+                                                <div class="w3-col s2">
+                                                    <p class="equals"><strong>&#61;</strong></p>
+                                                </div>
+                                                <div class="w3-col s10">
+                                                    <label>Daily Registered Sales</label>
+                                                    <input class="w3-input" type="text" ng-change="calculate()" ng-model="daily_regSales" value="{{ daily_regSales() | currency }}" readonly="readonly" />
+
+                                                </div>
+                                            </div>
+
+                                            <div class=" w3-row-padding s12 w3-center">
+                                                <div class="w3-col s2">
+                                                    <p class="minus"><strong>&minus;</strong></p>
+                                                </div>
+                                                <div class="w3-col s10">
+                                                    <label>Overrings</label>
+                                                    <input class="w3-input" type="number" name="Overrings" ng-change="calculate()" ng-model="overrings" value="{{ overrings() | currency }}" />
+
+                                                </div>
+                                            </div>
+
+                                            <div class=" w3-row-padding w3-center">
+                                                <div class="w3-col s10 w3-right">
+                                                    <label class="w3-center">Comments</label>
+                                                    <textarea class="w3-input s10" id="ringComment" type="text" rows="1"></textarea>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="over w3-row-padding w3-center">
+                                                <div class="w3-col s2">
+                                                    <p class="equals"><strong>&#61;</strong></p>
+                                                </div>
+                                                <div class="w3-col s10">
+                                                    <label>Daily Gross Sales</label>
+                                                    <input class="w3-input location-74" type="text" name="Daily Gross Sales" ng-model="daily_GrossSales" value="{{ daily_GrossSales() | currency }}" readonly="readonly" />
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </fieldset>
+                                </div>
+
+                            </div>
+
+                            <br/>
+
+                            <p class="selectloc">* Please select a location above.</p>
+                            <div class="w3-container-padding w3-black w3-center">
+                                <button class="w3-button registerbutton" onclick="openPrivs()" >Calculate Privileges</button>
+                                <br/>
+                                <br/>
+                                <div>
+                                    <label>Location Totals:</label>
+                                    <input class="w3-input allLocationTotal" name="Locations Total" readonly="readonly" value="0.00" />
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div id="privover" class="w3-container w3-col w3-center s12 m6 locatepriv">
+                        
+                        <div class="overlay-content">
+                            <a href="javascript:void(0)" class="closebtn" onclick="closePrivs()">&times;</a>
+                            <h4>Location Privileges</h4>
+
+                            <fieldset>
+                                <legend>Location 68 Privileges</legend>
+                                <div>
+                                    <div class=" w3-row-padding w3-center">
+                                        <div class="w3-col s10 w3-right">
+                                            <label>Location Gross</label>
+                                            <input class="w3-input loctotinput-68 locationgross" name="Location Gross" readonly="readonly" value="0.00" />
+                                        </div>
+                                    </div>
+                                    <div class="over w3-row-padding w3-center">
+                                        <div class="w3-col s2">
+                                            <p class="multiply"><strong>&#215;</strong></p>
+                                        </div>
+                                        <div class="w3-col s10">
+                                            <label>Sales Tax: 10%</label>
+                                            <input class="w3-input" name="Sales Tax: 10%" readonly="readonly" value="1.10" />
+
+                                        </div>
+                                    </div>
+                                    <div class="over w3-row-padding w3-center">
+                                        <div class="w3-col s2">
+                                            <p class="equals"><strong>&#61;</strong></p>
+                                        </div>
+                                        <div class="w3-col s10">
+                                            <label>Net of Taxes</label>
+                                            <input class="w3-input nettax-68" name="Net of Taxes" readonly="readonly" value="0.00" />
+
+                                        </div>
+                                    </div>
+                                    <div class="over w3-row-padding w3-center">
+                                        <div class="w3-col s2">
+                                            <p class="multiply"><strong>&#215;</strong></p>
+                                        </div>
+                                        <div class="w3-col s10">
+                                            <label>Privilege Percent: 15%</label>
+                                            <input class="w3-input" name="Privilege Percent" readonly="readonly" value="15%" />
+
+                                        </div>
+                                    </div>
+                                    <div class="over w3-row-padding w3-center">
+                                        <div class="w3-col s2">
+                                            <p class="equals"><strong>&#61;</strong></p>
+                                        </div>
+                                        <div class="w3-col s10">
+                                            <label>Privilege Due</label>
+                                            <input class="w3-input privdue-68 privgross" name="Privilege Due" readonly="readonly" value="0.00" />
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <fieldset>
+                                <legend>Location 74 Privileges</legend>
+                                <div>
+                                    <div class=" w3-row-padding w3-center">
+                                        <div class="w3-col s10 w3-right">
+                                            <label>Location Gross</label>
+                                            <input class="w3-input loctotinput-74 locationgross" name="Location Gross" readonly="readonly" value="0.00">
+                                        </div>
+                                    </div>
+                                    <div class="over w3-row-padding w3-center">
+                                        <div class="w3-col s2">
+                                            <p class="multiply"><strong>&#215;</strong></p>
+                                        </div>
+                                        <div class="w3-col s10">
+                                            <label>Sales Tax: 10%</label>
+                                            <input class="w3-input" name="Sales Tax: 10%" readonly="readonly" value="1.10"/>
+
+                                        </div>
+                                    </div>
+                                    <div class="over w3-row-padding w3-center">
+                                        <div class="w3-col s2">
+                                            <p class="equals"><strong>&#61;</strong></p>
+                                        </div>
+                                        <div class="w3-col s10">
+                                            <label>Net of Taxes</label>
+                                            <input class="w3-input nettax-74" name="Net of Taxes" readonly="readonly" value="0.00" />
+
+                                        </div>
+                                    </div>
+                                    <div class="over w3-row-padding w3-center">
+                                        <div class="w3-col s2">
+                                            <p class="multiply"><strong>&#215;</strong></p>
+                                        </div>
+                                        <div class="w3-col s10">
+                                            <label>Privilege Percent</label>
+                                            <input class="w3-input" name="Privilege Percent" readonly="readonly" value="15%" />
+
+                                        </div>
+                                    </div>
+                                    <div class="over w3-row-padding w3-center">
+                                        <div class="w3-col s2">
+                                            <p class="equals"><strong>&#61;</strong></p>
+                                        </div>
+                                        <div class="w3-col s10">
+                                            <label>Privilege Due</label>
+                                            <input class="w3-input privdue-74 privgross" name="Privilege Due" readonly="readonly" value="0.00" />
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <br/>
+                            <br/>
+                            <div>
+                                <div class="w3-container-padding w3-center s6  totalprivdue">
+                                    <div class="w3-container s6 w3-center">
+                                        <label>Total Privileges Due</label>
+                                        <input class="w3-input allprivdue" name="Privilege Due" readonly="readonly" value="0.00" />
+                                        <button class="w3-button submitbutton" type="submit">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <br />
+    <br />
+    <!---------------------- End Content ---------------------->
+
+
+    <div class="clearer"></div>
+    <!---------------------- End Main Wrapper ---------------------->
+    <!---------------------- Start Help Box ---------------------->
+    <script type="text/javascript" src="includes/js/dailyreportscript.js"></script>
+
+</body>
+
+    </html>
