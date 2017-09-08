@@ -1,0 +1,254 @@
+#lotImage-container {
+	height: 490px;
+	width: 800px;
+	overflow: hidden;
+	position: relative;
+	float: left;
+	background: #333333;
+	display: none;
+	margin-bottom: 10px;
+}
+#lotImage-container #tools {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 15;
+	width: 100%;
+	padding: 3px;
+	margin-top: -1px;
+	margin-left: -1px;
+}
+#lotImage-container #tools a {
+	color: #CCCCCC;
+}
+#lotImage-container #tools div {
+	float: left;
+}
+#lotImage-container #lotImage {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+#lotImage-container #fader {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+	display: none;
+	background: #000000;
+}
+.image-icon {
+	position: absolute;
+	z-index: 10;
+	cursor: pointer;
+}
+#icon_highlight_wrapper {
+	position: absolute;
+	z-index: 9;
+	overflow: hidden;
+	height: 16px;
+	width: 16px;
+	zoom: 1;
+}
+.icon_highlight {
+	height: 100%;
+	width: 100%;
+	background: url(../../images/icons/icon_highlight_b.png) no-repeat;
+	zoom: 1;
+}
+#lotImage-container .marker {
+	position: absolute;
+	z-index: 9;
+	cursor: arrow;
+	background: url(../../images/markers/arrow_s.png) no-repeat center bottom;
+}
+#lotImage-container .marker p {
+	color: #FFFFFF;
+	background: #000000;
+	padding: 2px 5px;
+	font-size: 9px;
+	font-weight: bold;
+	margin-bottom: 11px;
+	max-width: 100px;
+	min-width: 75px;
+	text-align: center;
+}
+#img_tools_points {
+	position: absolute;
+	display: none;
+	background: url(../../images/image_tools/bg_tools.png);
+	top: 30px;
+	left: 150px;
+	padding: 3px;
+	width: 200px;
+	z-index: 14;
+}
+ul.list_markers {
+	margin: 0px;
+	padding: 2px;
+}
+ul.list_markers li {
+	float: none;
+	list-style: none;
+	border-bottom: 1px dotted #999999;
+}
+ul.list_markers li:last-child {
+	border: 0;
+}
+ul.list_markers li a {
+	display: block;
+	text-decoration: none;
+	margin-bottom: 3px;
+	clear: both;
+	color: #CCCCCC;
+	padding: 3px;
+	font-size: 11px;
+}
+ul.list_markers li a:hover {
+	color: #FFFFFF;
+}
+.ui-effects-transfer {
+	border: 4px dotted #CCCCCC;
+}
+.bubble {
+	position:absolute;
+	top: 0px;
+	left: 0px;
+	color: #333333;
+	z-index:12;
+	display: none;
+	border: 1px solid #000000;
+	background: #FFFFFF;
+	font-size: 12px;
+	overflow: hidden;
+	width: 250px;
+}
+.bubble .tools {
+	margin: -1px;
+	padding: 3px 0px 3px 3px;
+}
+.bubble .title {
+	font-size: 16px;
+	float: left;
+	padding-top: 3px;
+}
+.bubble .close {
+	float: right;
+}
+.bubble .info {
+	padding: 5px;
+	font-weight: normal;
+	background: url(../../images/bubbles/bg_info.gif) repeat-x;
+}
+.bubble .info .spaces {
+	font-size: 16px;
+}
+.bubble .info .open {
+	color: #862E2A;
+	font-size: 20px;
+}
+.bubble .buttons {
+	padding: 3px;
+}
+.bubble a {
+	color: #CCCCCC;
+}
+ul.list_icons {
+	margin: 0px;
+	padding: 2px;
+	font-size: 12px;
+	font-weight: bold;	
+}
+ul.list_icons li {
+	float: left;
+	width: 49%;
+	list-style: none;
+}
+ul.list_icons li a {
+	display: block;
+	text-decoration: none;
+	margin-bottom: 2px;
+	margin-right: 2px;
+	clear: both;
+	border: 2px solid #F0F0F0;
+	color: #333333;
+	padding-top: 7px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	background: #EAEAEA url(../../images/modules/bg_lots.gif) repeat-x;
+}
+ul.list_icons li a:hover {
+	border: 2px solid #333333;
+	background: #FFFFFF url(../../images/modules/bg_lots_hover.gif) repeat-x;
+	cursor: pointer;
+}
+ul.list_icons li .clicked {
+	border: 2px solid #851518;
+	background: #FFFFFF;
+	font-size: 24px;
+}
+ul.list_icons li h1 {
+	font-size: 12px;
+	font-weight: bold;
+	padding: 0px 0px 3px;
+	margin: 0px 0px 0px 5px;
+	color: #666666;
+}
+ul.list_icons li h2 {
+	font-size: 16px;
+	font-weight: bold;
+	padding: 0px 0px 3px;
+	margin: 0px 0px 0px 5px;
+	color: #999999;
+}
+ul.list_icons li h2 .green {
+	color: #851518;
+}
+ul.list_icons li h2 .red {
+	color: #CC3300;
+}
+ul.list_icons li h2 small {
+	font-size: 9px;
+	color: #666666;
+	font-weight: normal;
+}
+#mainImage-container {
+	height: 490px;
+	width: 800px;
+	overflow: hidden;
+	position: relative;
+	float: left;
+	background: #333333 url(../../images/image_tools/bg_mainImage.jpg);
+	display: none;
+	margin-bottom: 10px;
+}
+#mainImage-container #tools {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 15;
+	width: 100%;
+	padding: 3px;
+	margin-top: -1px;
+	margin-left: -1px;
+}
+#mainImage-container #tools a {
+	color: #CCCCCC;
+}
+#mainImage-container #tools div.close {
+	float: right;
+	margin-right: 2px;
+}
+#mainImage-container #tools div.title {
+	font-size: 16px;
+	float: left;
+	padding-top: 3px;
+}
+#mainImage-container #mainImage {
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 30px;
+}

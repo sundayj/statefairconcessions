@@ -1,0 +1,237 @@
+/*--------------For mobile phones:--------------*/
+body, html{
+    background-color: #AB1B1F;
+    color: #333333;
+    font: 1em Arial, Helvetica, sans-serif;
+}
+.mainwrapper{
+    background-color: white;
+    border-top: 5px solid black;
+	border-right: 5px solid black;
+	border-bottom: 15px solid black;
+	border-left: 5px solid black;
+    width: 90%;
+    margin: 50px auto;
+}
+legend{
+    color: #862E2A;
+}
+[class*="audcol-"] {
+    width: 100%;
+    padding: 10px 0px;
+    margin: 10px auto;
+}
+[class*="regcol-"] {
+    width: 100%;
+    padding: 10px 0px;
+    margin: 10px auto;
+}
+[class*="empcol-"] {
+    width: 100%;
+    padding: 10px 0px;
+    margin: 10px auto;
+}
+[class*="obscol-"] {
+    width: 100%;
+    padding: 10px 0px;
+    margin: 10px auto;
+}
+[class*="obscol-"] {
+    width: 100%;
+    padding: 10px 0px;
+    margin: 10px auto;
+}
+[class*="stcol-"] {
+    width: 100%;
+    padding: 10px 0px;
+    margin: 10px auto;
+}
+[class*="comcol-"] {
+    width: 100%;
+    padding: 10px 0px;
+    margin: 10px auto;
+}
+input{
+    border-top: 1px solid #666666;
+	border-right: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	border-left: 1px solid #666666;
+	font-size: 16px;
+    background-color: rgb(250, 255, 189);
+}
+input:focus {
+	border: 1px solid #0099CC;
+}
+fieldset textarea{
+    width: 100%;
+    margin: 10px auto;
+    border-top: 1px solid #666666;
+	border-right: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	border-left: 1px solid #666666;
+	font-size: 16px;
+    background-color: rgb(250, 255, 189);
+}
+.subbtn{
+    margin: 10px auto;
+    text-align: center;
+}
+.conevalsubbtn{
+    padding: .4em 1em;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 11px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #777777;
+    background: #111111;
+    color: #e3e3e3;
+}
+.fsqualsubbtn{
+    padding: .4em 1em;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 11px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #777777;
+    background: #111111;
+    color: #e3e3e3;
+}
+p{
+    width: 90%;
+    margin: 10px auto;
+}
+header{
+    text-align: center;
+    width: 90%;
+    height: auto;
+    margin: 10px auto;
+}
+
+/*-----------------For tablets:------------------*/
+
+@media only screen and (min-width: 768px) {
+    fieldset{
+        width: 90%;
+        margin: 0px auto;
+    }
+    * {
+        box-sizing: border-box;
+    }
+
+    .audcol-1{
+        width: 10%; /*x2*/
+    }
+    .audcol-1_2{
+        width: 20%; /*x4*/
+    }
+    .audcol-2_1{
+        width: 25%;
+        margin: 5px;
+    }
+    .audcol-2_2{
+        width: 100%;
+    }
+    [class*="audcol-"] {
+        float: left;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin: 5px auto;
+    }
+    .regcol-1_1{
+        width: 100%;
+    }
+    .regcol-1_2{
+        width: 33.33%;
+    }
+    [class*="regcol-"] {
+        float: left;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin: 5px auto;
+    }
+    .empcol-1_1{
+        width: 66.67%;
+    }
+    .empcol-1_2{
+        text-align: center;
+        width: 33.33%;
+    }
+    [class*="empcol-"] {
+        float: left;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin: 5px auto;
+    }
+    
+    /*------Food Stand Quality Form Only Below-------*/
+    .obscol-1_1{
+        width: 100%;
+    }
+    .obscol-1_2{
+        width: 33.33%;
+    }
+    .obscol-2_1{
+        width: 66.67%;
+    }
+    .obscol-2_2{
+        text-align: center;
+        width: 33.33%;
+    }
+    .obscol-3_1{
+        width: 50%;
+    }
+    [class*="obscol-"] {
+        float: left;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin: 5px auto;
+    }
+    .obscol-1{
+        width: 10%; /*x2*/
+    }
+    .obscol-1_2{
+        width: 20%; /*x4*/
+    }
+    .obscol-2_1{
+        width: 25%;
+        margin: 5px;
+    }
+    .obscol-2_2{
+        width: 100%;
+    }
+    [class*="obscol-"] {
+        float: left;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin: 5px auto;
+    }
+    .stcol-1_1{
+        width: 66.66%;
+    }
+    .stcol-1_2{
+        width: 33.33%;
+        text-align: center;
+    }
+    [class*="stcol-"] {
+        float: left;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin: 5px auto;
+    }
+    .comcol-1_1{
+        width: 66.66%;
+    }
+    .comcol-1_2{
+        width: 33.33%;
+    }
+    [class*="comcol-"] {
+        float: left;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin: 5px auto;
+    }
+}

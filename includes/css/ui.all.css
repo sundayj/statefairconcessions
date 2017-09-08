@@ -1,0 +1,28 @@
+/**********************************
+
+Use: Interface Css
+
+***********************************/
+@import "../jquery/themes/black-tie/jquery-ui-1.7.3.custom.css";
+@import "ui.layout.css";
+@import "ui.myspaces.css";
+@import "ui.checkout.css";
+
+/* Buttons for hometemporary.php */
+
+/*#level2button {
+    width: 50%;
+    height: 300px;
+    text-align: center;
+    margin: 50px auto;
+    font-size: 2vw;
+}
+
+#level4button {
+    width: 50%;
+    height: 100px;
+    text-align: center; 
+    margin: 50px auto;
+    font-size: 2vw;   
+}*/
+

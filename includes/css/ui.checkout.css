@@ -1,0 +1,37 @@
+#wrapper-checkout {
+	font-size: 12px;
+}
+#wrapper-checkout .module {
+	color: #333333;
+	background: #FFFFFF;
+	overflow: hidden;
+	margin-bottom: 5px;
+	position: relative;
+}
+#wrapper-checkout .float {
+	float: left;
+}
+#wrapper-checkout .module .title {
+	margin: -1px;
+	padding: 3px;
+	font-size: 16px;
+}
+#wrapper-checkout .module .info {
+	padding: 10px;
+	font-weight: normal;
+	float: left;
+	width: 100%;
+}
+#wrapper-checkout .module .tools {
+	padding: 2px;
+	margin: -1px;
+	position: absolute;
+	right: 0px;
+	bottom: 5px;
+}
+#wrapper-checkout .module .tools a {
+	float: right;
+}
+#wrapper-checkout .module a {
+	color: #CCCCCC;
+}

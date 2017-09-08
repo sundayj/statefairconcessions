@@ -1,0 +1,120 @@
+#header_main {
+	min-width: auto;
+}
+#wrapper_main{
+	min-width: auto;
+}
+#wrapper_content{
+	min-width: auto;
+}
+#report_container {
+	display: none;
+}
+#report-tools {
+	margin: -1px;
+	font-size: 12px;
+	padding: 3px;
+	overflow: hidden;
+}
+#report-tools a {
+	color: #CCCCCC;
+}
+#report-tools div {
+	float: left;
+	margin-left: 3px;
+}
+#report-tools input {
+	border-top: 1px solid #666666;
+	border-right: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	border-left: 1px solid #666666;
+	width: 150px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;	
+}
+#report-table {
+	font-weight: normal;
+	color: #333333;
+}
+#report-table a {
+	color: #851518;
+}
+#tabs_full {
+	font-size: 11px;
+	float: left;
+	width: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#tabs_full .tab_content {
+	height: 320px;
+	padding: 10px;
+	position: relative;
+}
+.float-left {
+	float: left;
+}
+.module {
+	color: #333333;
+	background: #FFFFFF;
+	overflow: hidden;
+	margin-bottom: 5px;
+	position: relative;
+}
+.module .title {
+	margin: -1px;
+	padding: 3px;
+	font-size: 16px;
+}
+.module .info {
+	padding: 10px;
+	font-weight: normal;
+	float: left;
+	width: 100%;
+	overflow: hidden;
+}
+.module .tools {
+	padding: 2px;
+	margin: -1px;
+	position: absolute;
+	right: 0px;
+	bottom: 5px;
+}
+.module .tools a {
+	float: right;
+}
+.module a {
+	color: #CCCCCC;
+}
+@media screen and (max-width: 600px){
+	#page-content{
+		margin: 0px;
+		width: 306px;
+	}
+    #mainNav ul{
+        margin-left: 0px;
+    }
+    #reportNav{
+        height: auto;
+    }
+    #reportNav ul{
+        padding: 3px;
+    }
+}
+@media screen and (max-width: 450px){
+    #header_main{
+        height: 50px;
+    }
+    #wrapper_main{
+        margin-left: auto;
+        margin-right: auto;
+        width: 310px;
+    }
+    mainNav.bottom{
+        width: 110px;
+        height: 63px;
+    }
+    #mainNav ul li a{
+        width: 110px;
+        height: 71px;
+    }
+}

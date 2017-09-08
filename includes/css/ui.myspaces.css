@@ -1,0 +1,58 @@
+ul.myspaces {
+	margin: 0px;
+	padding: 2px;
+	font-size: 12px;
+	font-weight: bold;	
+}
+ul.myspaces li {
+	float: none;
+	list-style: none;
+	background: #F7F7F7 url(../../images/modules/bg_item_off.gif) repeat-x;
+}
+ul.myspaces li .space {
+	display: block;
+	text-decoration: none;
+	margin-bottom: 2px;
+	clear: both;
+	border: 2px solid #F0F0F0;
+	color: #000000;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	background: url(../../images/icons/car_heart.png) no-repeat 5px 12px;
+	padding-left: 20px;
+}
+ul.myspaces li .reserve {
+	border-color: #FFCCCC;
+	background: url(../../images/icons/car_grey_heart.png) no-repeat 5px 12px;
+}
+ul.myspaces li .space .price {
+	float: right;
+	margin: 10px 10px 0px 0px;
+}
+ul.myspaces li .space a {
+	float: right;
+	margin-top: 5px;
+}
+ul.myspaces li .space .info {
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0px 0px 0px 5px;
+	padding: 0px 0px 3px;
+}
+ul.myspaces li .space .info small {
+	font-size: 10px;
+	padding: 5px 0px 0px;
+	color: #666666;
+	font-weight: normal;
+}
+ul.myspaces li .carPasses {
+	border-top: 1px solid #CCCCCC;
+	margin: 5px 0 0 0;
+	clear: both;
+	display: block;
+}
+ul.myspaces li .carTitle {
+	padding-top: 10px;
+	font-weight: normal;
+	font-size: 11px;
+}

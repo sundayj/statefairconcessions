@@ -1,0 +1,376 @@
+body,html  {
+	font-family: Arial, Helvetica, sans-serif;
+	background:#AB1B1F url(../../images/bg_main.gif) repeat-x;
+	color:#333333;
+	overflow-x: hidden;
+	margin: 0px;
+}
+a {
+	outline: none;
+}
+#header_main, 
+#header_small {
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	height: 102px;
+	z-index: 5;
+	background: url(../../client_images/1/logo.png) no-repeat left center;
+}
+#header_main {
+	min-width: 950px;
+	max-width: 1150px;
+	width: 90%;
+}
+#header_small {
+	width: 600px;
+}
+#header_main .info {
+	float: right;
+	margin-top: 15px;
+}
+#header_main .info a {
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+#wrapper_main, 
+#wrapper_small {
+	background:#FFFFFF;
+	position: relative;
+	border-top: 3px solid #333333;
+	border-right: 3px solid #333333;
+	border-bottom: 10px solid #333333;
+	border-left: 3px solid #333333;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 20px;
+}
+#wrapper_main {
+	min-width: 950px;
+	max-width: 1150px;
+	width: 90%;
+}
+#wrapper_small {
+	width: 600px;
+}
+#wrapper_content {
+	background: url(../../images/bg_content.gif) repeat-x;
+	position: relative;
+	float: left;
+	width: 100%;
+	padding-bottom: 5px;
+}
+#page-header {
+	clear: both;
+	padding: 10px;
+}
+#page-header .tools {
+	float: right;
+}
+#page-header .tools div {
+	float: left;
+}
+#page-header .title {
+	font-size: 20px;
+	border-right: 1px solid #CCCCCC;
+	padding-right: 10px;
+	margin-right: 10px;
+}
+#page-header .desc {
+	font-size: 14px;
+	font-weight: bold;
+	color: #862E2A;
+}
+#page-content {
+	margin-bottom: 5px;
+	margin-left: 300px;
+	margin-right: 10px;
+	font-size: 12px;
+}
+#page-content-full {
+	margin: 0px 10px 10px;
+	font-size: 12px;
+}
+/*baxley navigation*/
+#reportNav
+{
+    background:#fdfdfd;
+    width:100%;
+    position:relative;
+    height:50px;  
+}
+#reportNav ul
+{
+     margin-left:130px;
+     margin-top:5px;
+     padding-top:3px;
+}
+
+#reportNav li
+{
+    background: url(../../images/nav_main/icon_reports.png) no-repeat;
+    padding-left:35px;
+    height:40px;
+    list-style:none;
+    vertical-align:middle;
+    margin-left:35px;
+    display:inline-block;
+
+}
+#reportNav li a
+{
+    text-decoration:none;
+    color:#862E2A;
+    
+
+}
+#mainNav {
+	background:#F3F3F3 url(../../images/nav_main/bg_main.gif) repeat-x;
+	clear: both;
+	width: 100%;
+	float: left;
+	overflow:hidden;
+	position:relative;
+}
+#mainNav ul {
+	clear:left;
+	float:left;
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	position:relative;
+	/*left:10%;*/
+    margin-left:180px;
+	text-align:center;
+}
+#mainNav li {
+	background: url(../../images/nav_main/div.gif) no-repeat right top;
+	display:block;
+	float:left;
+	list-style:none;
+	margin:0;
+	padding:0;
+	position:relative;
+	/*right:50%;*/
+}
+#mainNav a {
+	display: block;
+	text-decoration: none;
+	font-weight: bold;
+	color: #C0C0C0;
+	height: 71px;
+	width: 110px;
+	position: relative;
+	font-size: 11px;
+	float: none;
+}
+#mainNav .bottom {
+	position: absolute;
+	bottom: 5px;
+	left: 0px;
+	width: 100%;
+	text-align: center;
+	cursor: pointer;
+}
+#mainNav .bottom img {
+	padding-bottom: 3px;
+}
+#mainNav .first {
+	background:url(../../images/nav_main/div.gif) no-repeat left top;
+}
+#mainNav a:hover {
+  color: #333333;
+}
+#mainNav #current {
+	background: #ECECEC url(../../images/nav_main/bg_selected.gif) repeat-x;
+}
+#mainNav #current a {
+  color: #862E2A;
+  background: url(../../images/nav_main/div.gif) no-repeat right top;
+}
+.clearer {
+	clear: both;
+}
+
+#leftnav {
+	width: 285px;
+	margin-right: 10px;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	float: left;
+}.jquery-button { 
+   outline: 0; 
+   margin: 0 4px 0 0; 
+   padding: .4em 1em; 
+   text-decoration: none !important; 
+   cursor: pointer; 
+   position: relative; 
+   text-align: center; 
+   zoom: 1;
+   font-size: 11px;
+}
+.jquery-button .ui-icon {
+	position: absolute;
+	top: 50%;
+	margin-top: -8px;
+	left: 50%;
+	margin-left: -8px;
+}
+a.jquery-button {
+	float: left;
+}
+/* remove extra button width in IE */
+button.jquery-button {
+	width: auto;
+	overflow: visible;
+}
+.jquery-button-icon-left {
+	padding-left: 2.1em;
+}
+.jquery-button-icon-right {
+	padding-right: 2.1em;
+}
+.jquery-button-icon-left .ui-icon {
+	right: auto; left: .2em;
+	margin-left: 0;
+}
+.jquery-button-icon-right .ui-icon {
+	left: auto; right: .2em;
+	margin-left: 0;
+}
+/* solo icon buttons must have block properties for the text-indent to work */	
+.jquery-button-icon-solo {
+	display:block;
+	width:8px;
+	text-indent: -9999px;
+}
+#tabs_account {
+	font-size: 11px;
+	float: left;
+	width: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#tabs_account .tab_content {
+	height: 442px;
+	padding: 0px;
+	position: relative;
+}
+#tabs {
+	font-size: 11px;
+	width: auto;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#tabs .tab_content {
+	height: 360px;
+	padding: 5px;
+	overflow: auto;
+	position: relative;
+}
+#module-cart {
+	width: auto;
+	height: 80px;
+	border: 2px solid #CCCCCC;
+	position: relative;
+	background: #E0E0E0 url(../../images/bg_cart.gif) repeat-x;
+	margin-top: 3px;
+}
+#module-cart .content {
+	padding: 5px;
+	font-size: 11px;
+}
+#module-cart .content strong {
+	font-size: 14px;
+}
+#module-cart .total {
+	font-size: 24px;
+	position: absolute;
+	left: 5px;
+	bottom: 0px;
+	color: #862E2A;
+	font-weight: bold;
+}
+#module-cart .total small {
+	font-size: 12px;
+	line-height: 12px;
+	font-weight: bold;
+	color: #333333;
+	vertical-align: middle;
+}
+#module-cart .tools {
+	position: absolute;
+	right: 0px;
+	bottom: 5px;
+}
+#module-cart .tools div {
+}
+#dialog-container {
+	top: 0px;
+	left: 0px;
+	width: 500px;
+	z-index: 999;
+	position: absolute;
+	display: none;
+	background: #FFFFFF;
+	font-size: 12px;
+	color: #333333;
+	overflow: hidden;
+}
+#dialog-container #tools {
+	margin: -1px;
+	padding: 3px 0px 3px 3px;
+	font-size: 16px;
+}
+#dialog-container a {
+	color: #CCCCCC;
+}
+#dialog-container #tools .close {
+	float: right;
+}
+#dialog-container #tools .title {
+	font-size: 16px;
+	float: left;
+	padding-top: 3px;
+}
+#dialog-container .content {
+	padding: 10px;
+	font-weight: normal;
+	overflow: auto;
+	max-height: 400px;
+}
+#dialog-container .buttons {
+	margin-top: 20px;
+	clear: both;
+}
+#page-overlay {
+	position:fixed;
+	top:0;
+	right:0;  
+	bottom:0;  
+	left:0;  
+	height:100%;  
+	width:100%;  
+	margin:0;  
+	padding:0;  
+/*	background:#000000;  
+	opacity:.80;  
+	filter: alpha(opacity=80);  
+	-moz-opacity: 0.80;  */
+	background: url(../../images/image_tools/bg_tools.png);
+	z-index:101;
+	display: none;
+}
+#page-loading {
+	position:fixed;
+	top:0;
+	right:0;  
+	bottom:0;  
+	left:0;  
+	height:100%;  
+	width:100%;  
+	margin:0;  
+	padding:0;  
+	background: #FFFFFF url(../../images/ajax-loader.gif) no-repeat center center;
+	z-index:101;
+	display: none;
+}

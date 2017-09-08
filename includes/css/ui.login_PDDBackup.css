@@ -1,0 +1,56 @@
+form.cmxform {
+	width: 100%;
+	color: #333;
+	font: 1em Arial, Helvetica, sans-serif;
+}
+form.cmxform fieldset {
+	padding: 20px;
+	margin: 0px;
+	border: none;
+}
+form.cmxform label {
+	display: inline-block;
+	line-height: 1.8;
+	vertical-align: top;
+	cursor: hand;
+	text-align: right;
+	font-weight: bold;
+	font-size: 11px;
+	color: #333333;
+	width: 75px;
+	padding-top: 4px;
+}
+form.cmxform .submit {
+	margin-left: 75px;
+}
+form.cmxform input {
+	border-top: 1px solid #666666;
+	border-right: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	border-left: 1px solid #666666;
+	font-size: 16px;
+}
+form.cmxform input:focus {
+	border: 1px solid #0099CC;
+}
+form.cmxform .title {
+	margin-left: 10px;
+	font-size: 18px;
+	color: #666666;
+}
+form.cmxform p {
+	margin: 0px;
+	padding: 0px 0px 10px;
+}
+form.cmxform label.error {
+	margin-left: 10px;
+	width: auto;
+	display: inline;
+	color: red;
+	font-style: italic;
+	font-weight: normal;
+}
+a {
+	color: #999999;
+	font-size: 15px;
+}
