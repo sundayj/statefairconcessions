@@ -55,9 +55,9 @@ $(document).ready(function () {
         //Put location total under its respective location privilege field as location gross.
         $(".loctotinput-68").val((sumLocation_68).toFixed(2));
         // Multiplies location gross by sales tax and returns as net of taxes.
-        $(".nettax-68").val((sumLocation_68 * 1.10).toFixed(2));
+        $(".nettax-68").val((sumLocation_68 * 1.07).toFixed(2));
         // Multiplies net of taxes by the privilege percent, and then returns as location's privilige due.
-        $(".privdue-68").val(((sumLocation_68 * 1.10) * .15).toFixed(2));
+        $(".privdue-68").val(((sumLocation_68 * 1.07) * .12).toFixed(2));
 
 
 
@@ -72,9 +72,9 @@ $(document).ready(function () {
         //Put location total under its respective location privilege field as location gross.
         $(".loctotinput-74").val((sumLocation_74).toFixed(2));
         // Multiplies location gross by sales tax and returns as net of taxes.
-        $(".nettax-74").val((sumLocation_74 * 1.10).toFixed(2));
+        $(".nettax-74").val((sumLocation_74 * 1.07).toFixed(2));
         // Multiplies net of taxes by the privilege percent, and then returns as location's privilige due.
-        $(".privdue-74").val(((sumLocation_74 * 1.10) * .15).toFixed(2));
+        $(".privdue-74").val(((sumLocation_74 * 1.07) * .12).toFixed(2));
 
         //Gets location totals, adds them, and returns as Location Totals.
         var sumAllLocations = 0;
